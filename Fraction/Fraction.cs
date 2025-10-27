@@ -62,64 +62,14 @@ namespace Fraction
 		//	Console.WriteLine($"CopyAssignment: {this.GetHashCode()}");
 		//	return new Fraction(other);
 		//}
-		//public Fraction operator+=(Fraction other)
-		//{
-		//	if (this.Denominator == other.Denominator)
-		//	{
-		//		this.Integer += other.Integer;
-		//		this.Numerator += other.Numerator;
-		//	}
-		//	else
-		//	{
-		//		int lcm = LCM(this.Denominator, other.Denominator);
-		//		this.Integer += other.Integer;
-		//		this.Numerator = this.Numerator * (lcm / this.Denominator) + other.Numerator * (lcm / other.Denominator);
-		//		this.Denominator = lcm;
-		//	}
-		//	this = ToProper(this);
-		//	return This;
-		//}
-		//public Fraction operator-=(Fraction other)
-		//{
-		//	if (this.Denominator == other.Denominator)
-		//	{
-		//		this.Integer -= other.Integer;
-		//		this.Numerator -= other.Numerator;
-		//	}
-		//	else
-		//	{
-		//		int lcm = LCM(this.Denominator, other.Denominator);
-		//		this.Integer -= other.Integer;
-		//		this.Numerator = this.Numerator * (lcm / this.Denominator) - other.Numerator * (lcm / other.Denominator);
-		//		this.Denominator = lcm;
-		//	}
-		//	this = ToProper(this);
-		//	return this;
-		//}
-		//public Fraction operator*=(Fraction other)
-		//{
-		//	return new Fraction(this * other);
-		//}
-		//public Fraction operator/=(Fraction other)
-		//{
-		//	return new Fraction(this / other);
-		//}
 		public static Fraction operator++(Fraction This)
 		{
 			return new Fraction(This.Integer + 1, This.Numerator, This.Denominator);
 		}
-		//public static Fraction operator++(Fraction This, int postfix)
-		//{
-		//	return new Fraction(This.Integer, This.Numerator, This.Denominator);
-		//}
 		public static Fraction operator--(Fraction This)
 		{
 			return new Fraction(This.Integer - 1, This.Numerator, This.Denominator);
 		}
-		//public static Fraction operator--(Fraction This, int postfix)
-		//{
-		//	return new Fraction(This.Integer, This.Numerator, This.Denominator);
-		//}
 		public static Fraction operator*(Fraction left, Fraction right)
 		{
 			left = ToImproper(left);
